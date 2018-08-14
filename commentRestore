@@ -1,0 +1,13 @@
+USE [dbKBell]
+GO
+/****** Object:  StoredProcedure [dbo].[commentRestore]    Script Date: 08/13/2018 20:14:22 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[commentRestore] 
+@ID int
+AS
+UPDATE [tblComments]
+	SET deleted = 'false'
+	WHERE @ID = ID
