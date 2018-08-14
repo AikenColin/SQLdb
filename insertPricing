@@ -1,0 +1,29 @@
+USE [dbKBell]
+GO
+/****** Object:  StoredProcedure [dbo].[insertPricing]    Script Date: 08/13/2018 20:10:03 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[insertPricing]
+@kits varchar(50),
+@bells varchar(50),
+@music varchar(50),
+@cds varchar(50)
+AS
+BEGIN
+INSERT INTO tblPricing
+(
+	[kits],
+	[bells],
+	[music],
+	[cds]
+)
+VALUES
+(
+	@kits,
+	@bells,
+	@music,
+	@cds
+)
+END
