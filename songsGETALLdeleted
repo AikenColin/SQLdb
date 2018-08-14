@@ -1,0 +1,12 @@
+USE [dbKBell]
+GO
+/****** Object:  StoredProcedure [dbo].[songsGETALLdeleted]    Script Date: 08/13/2018 20:17:58 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[songsGETALLdeleted] 
+AS
+SELECT * FROM tblSongs
+WHERE (deleted = 'true')
+ ORDER BY ID DESC
